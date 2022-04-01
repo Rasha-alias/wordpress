@@ -1,3 +1,4 @@
+// Rasha code
 //Funktion for bringing data from Strapi CMS
 async function getStudentDataFromStrapi() {
     //Url for Strapi API to bring all students information
