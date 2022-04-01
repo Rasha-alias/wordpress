@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="Student.js"></script>
+    <title>Get and post Students Data from and to Strapi</title>
+
+
+</head>
+<body>
+
+  <!--Fetch Students Data from Strapi--> 
+    <button onclick="getStudentDataFromStrapi();">Visa Studenter</button>
+   
+    <div id="studentFetched"></div>
+    <br> <br>
+
+  <!--Create fields for username and password -->  
+
+<div>
+    <div>
+      <label for="user">Användarnamn: </label>
+      <input type="text" name="user" id="user" />
+    </div>
+  
+    <div>
+      <label for="pass">Lösenor: </label>
+      <input type="pass" name="pass" id="pass" />
+    </div>
+
+    
+    <!--Create fields for students firstname, Last name and age to enable authenticated users to add a new student or more-->
+    <div>
+      <label for="fName">Förenamn: </label>
+      <input type="text" name="fName" id="studentFName" />
+    </div>
+   
+    <div>
+        <label for="lName">Efternamn: </label>
+        <input type="text" name="lName" id="studentLName" />
+      </div>
+    <div>
+     
+        <label for="age">Ålder: </label>
+      <input type="number" name="age" id="age" />
+    </div>
+
+    
+    <br> 
+    <!--function to get token and post new data on Strapi-->
+    <div>
+      <button onclick="getToken();">Skicka en ny student</button>
+    </div>
+      
+</body>
+</html>
