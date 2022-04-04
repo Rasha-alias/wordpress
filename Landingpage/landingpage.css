@@ -50,7 +50,7 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 2px;
-    margin-left: 11rem;
+    margin-left: 5rem;
 }
 
 .col-4 {
