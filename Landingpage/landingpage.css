@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../img/pexels-charles-parker-5845712.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    background-position: 50% 50%;
+}
+
+.bg h1 {
+    position: absolute;
+    top: 13vh;
+    left: calc(50vw - 200px);
+    color: #fff;
+    font-size: 50px;
+}
+
+.bg h5 {
+    position: absolute;
+    top: 23vh;
+    left: calc(50vw - 450px);
+    color: #fff;
+    font-size: 20px;
+}
+
+.bg button {
+    position: absolute;
+    top: 33vh;
+    left: calc(50vw - 85px);
+    font-size: 16px;
+}
+
+.container {
+    width: 80%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.grid {
+    margin: 1em 1em 1em 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 2px;
+    margin-left: 11rem;
+}
+
+.col-4 {
+    grid-column: auto/span 4;
+}
+
+@media (min-width: 0px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
