@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="Student.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Get and post Students Data from and to Strapi</title>
 
 
@@ -15,7 +16,7 @@
   <!--Fetch Students Data from Strapi--> 
     <button onclick="getStudentDataFromStrapi();">Visa Studenter</button>
    
-    <div id="studentFetched"></div>
+    <div id="studentFetched" class="style"></div>
     <br> <br>
 
   <!--Create fields for username and password -->  
@@ -23,37 +24,44 @@
 <div>
     <div>
       <label for="user">Användarnamn: </label>
-      <input type="text" name="user" id="user" />
+      <input type="text" name="user" id="user"  onchange="userValidate(this);" />
+      <div id="userError" class="errorInfo"></div>
     </div>
   
     <div>
       <label for="pass">Lösenor: </label>
-      <input type="pass" name="pass" id="pass" />
+      <input type="password" name="pass" id="pass" onchange="passValidate(this);" />
+      <div id="passwordError" class="errorInfo"></div>
     </div>
 
     
     <!--Create fields for students firstname, Last name and age to enable authenticated users to add a new student or more-->
     <div>
       <label for="fName">Förenamn: </label>
-      <input type="text" name="fName" id="studentFName" />
+      <input type="text" name="fName" id="studentFName" onchange="firstNameValidate(this)" />
+      <div id="firstNameError" class="errorInfo"></div>
     </div>
    
     <div>
         <label for="lName">Efternamn: </label>
-        <input type="text" name="lName" id="studentLName" />
+        <input type="text" name="lName" id="studentLName" onchange="lastNameValidate(this)"/>
+        <div id="lastNameError" class="errorInfo"></div>
       </div>
+      
     <div>
-     
         <label for="age">Ålder: </label>
-      <input type="number" name="age" id="age" />
+      <input type="number" name="age" id="age" onchange="ageValidate(this)" />
+      <div id="ageError" class="errorInfo"></div>
     </div>
 
     
     <br> 
     <!--function to get token and post new data on Strapi-->
     <div>
-      <button onclick="getToken();">Skicka en ny student</button>
+      <button onclick="postStudentData();">Skicka en ny student</button>
     </div>
-      
+</div>  
+
+
 </body>
 </html>
