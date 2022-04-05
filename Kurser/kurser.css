@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/pexels-charles-parker-5845712.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh;
+  width: 100%;
+  position: relative;
+  background-position: 50% 50%;
+}
+
+.bg h1 {
+  position: absolute;
+  top: 13vh;
+  left: calc(50vw - 200px);
+  color: #fff;
+  font-size: 50px;
+  font-family: "Trirong", serif;
+}
+
+.bg h5 {
+  position: absolute;
+  top: 23vh;
+  left: calc(50vw - 450px);
+  color: #fff;
+  font-size: 20px;
+  font-family: "Trirong", serif;
+}
+
+.bg button {
+  position: absolute;
+  top: 33vh;
+  left: calc(50vw - 85px);
+  font-size: 16px;
+}
+
+.col-4 > p {
+  border-style: outset;
+
+  margin: 10px;
+  padding: 10px;
+}
+
+.col-4 > p:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.col-4 > h3 {
+  border-style: outset;
+  font-family: "Trirong", serif;
+
+  margin: 10px;
+}
+
+.col-4 > h3:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.grid {
+  margin: 1em 1em 1em 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2px;
+  margin-left: 5rem;
+}
