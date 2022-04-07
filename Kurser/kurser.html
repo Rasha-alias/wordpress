@@ -1,83 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kurser</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kurser</title>
 
-    <link rel="stylesheet" href="kurser.css" />
-  </head>
-  <body>
-    <div class="bg">
-      <h1>KYH yrkeshögskola</h1>
-      <h5>
-        Den smarta vägen till ett nytt och meningsfullt yrkesliv. Vi erbjuder
-        ett antal olika kurser inom programmering.
-      </h5>
-    </div>
-
-    <div class="container">
-      <div class="grid">
-        <div class="col-4">
-          <h3><strong>React.js</strong></h3>
-          <p>
-            React.js är ett Javascript-bibliotek som används för att bygga
-            webbgränssnitt. Biblioteket utvecklades av företaget Meta och är
-            släppt med öppen källkod. Här på KYH erbjuder vi en React-utbildning
-            som försäkrar din plats på arbetsmarknaden, med lärare som kan den
-            allra senaste versionen av React med en finess du aldrig sett förr!
-          </p>
+        <link rel="stylesheet" href="kurser.css" />
+        <script src="kurser.js"></script>
+    </head>
+    <body>
+        <div class="bg">
+            <h1>KYH yrkeshögskola</h1>
+            <h5>
+                Den smarta vägen till ett nytt och meningsfullt yrkesliv. Vi
+                erbjuder ett antal olika kurser inom programmering.
+            </h5>
         </div>
 
-        <div class="col-4">
-          <h3><strong>Javascript</strong></h3>
-          <p>
-            Javascript är den grund som mycket av den moderna front-end världen
-            vilar på. Utan en gedigen kunskap inom Javascript kommer du inte
-            långt. Som tur är vi på KYH redo att ge dig den utbildningen som
-            behövs för att klara sig gallant.
-          </p>
+        <div class="container">
+            <div class="grid" id="coursesFetched"></div>
         </div>
-
-        <div class="col-4">
-          <h3><strong>HTML & CSS</strong></h3>
-          <p>
-            HTML & CSS är en av byggstenarna vi som programmerare använder för
-            att bygga våra hemsidor. Grundläggande HTML & CSS är väsentligt, och
-            därför ser vi till att du som elev kommer härifrån med det som
-            behövs för att kunna stå på dina egna två ben i
-            programmeringsvärlden!
-          </p>
-        </div>
-        <div class="col-4">
-          <h3><strong>UX & Grafiska verktyg </strong></h3>
-          <p>
-            Denna utbildning ger dig ett nytt och behövligt perspektiv hur
-            användaren upplever gränssnittet som du skapat. Efter denna
-            utbildning kommer du garanterat skapa gränssnittet med användaren i
-            fokus!
-          </p>
-        </div>
-        <div class="col-4">
-          <h3><strong>Backend-utveckling</strong></h3>
-          <p>
-            Som Backend-utvecklare arbetar du med servrar, databaser och
-            applikationer. Här får du lära dig allt om dessa tre superviktiga
-            komponenter, som kommer göra dig till mästare inom Back-end världen.
-          </p>
-        </div>
-        <div class="col-4">
-          <h3><strong>Arbetsmetodik</strong></h3>
-          <p>
-            Arbetsmetodik är något vi alla behöver kunna för att vara
-            framgångsrika i vår problemlösning. Tillvägagångssättet kan vara
-            skillnaden mellan succe och ett totalt misslyckande. Som tur är får
-            ni en grundlig genomgång av de olika arbetssätten på KYH:s
-            specialgjorda Arbetsmetodikskurs!
-          </p>
-        </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
+
+<!-- <div class="col-4">
+    <h3><strong>React.js</strong></h3>
+    <p>
+        React.js är ett Javascript-bibliotek som används för att
+        bygga webbgränssnitt. Biblioteket utvecklades av
+        företaget Meta och är släppt med öppen källkod. Här på
+        KYH erbjuder vi en React-utbildning som försäkrar din
+        plats på arbetsmarknaden, med lärare som kan den allra
+        senaste versionen av React med en finess du aldrig sett
+        förr!
+    </p>
+</div>
+
+<div class="col-4">
+    <h3><strong>Javascript</strong></h3>
+    <p>
+        Javascript är den grund som mycket av den moderna
+        front-end världen vilar på. Utan en gedigen kunskap inom
+        Javascript kommer du inte långt. Som tur är vi på KYH
+        redo att ge dig den utbildningen som behövs för att
+        klara sig gallant.
+    </p>
+</div>
+
+<div class="col-4">
+    <h3><strong>HTML & CSS</strong></h3>
+    <p>
+        HTML & CSS är en av byggstenarna vi som programmerare
+        använder för att bygga våra hemsidor. Grundläggande HTML
+        & CSS är väsentligt, och därför ser vi till att du som
+        elev kommer härifrån med det som behövs för att kunna
+        stå på dina egna två ben i programmeringsvärlden!
+    </p>
+</div>
+<div class="col-4">
+    <h3><strong>UX & Grafiska verktyg </strong></h3>
+    <p>
+        Denna utbildning ger dig ett nytt och behövligt
+        perspektiv hur användaren upplever gränssnittet som du
+        skapat. Efter denna utbildning kommer du garanterat
+        skapa gränssnittet med användaren i fokus!
+    </p>
+</div>
+<div class="col-4">
+    <h3><strong>Backend-utveckling</strong></h3>
+    <p>
+        Som Backend-utvecklare arbetar du med servrar, databaser
+        och applikationer. Här får du lära dig allt om dessa tre
+        superviktiga komponenter, som kommer göra dig till
+        mästare inom Back-end världen.
+    </p>
+</div>
+<div class="col-4">
+    <h3><strong>Arbetsmetodik</strong></h3>
+    <p>
+        Arbetsmetodik är något vi alla behöver kunna för att
+        vara framgångsrika i vår problemlösning.
+        Tillvägagångssättet kan vara skillnaden mellan succe och
+        ett totalt misslyckande. Som tur är får ni en grundlig
+        genomgång av de olika arbetssätten på KYH:s
+        specialgjorda Arbetsmetodikskurs!
+    </p>
+</div> -->
