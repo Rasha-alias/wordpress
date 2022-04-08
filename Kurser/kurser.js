@@ -17,7 +17,7 @@ async function getDataFromStrapi() {
                 console.log(x + ": " + attr[x]);
             }
 
-            output += `<div class="col-4"><h3><strong>${attr.Name}</strong></h3><p>${attr.Description}</p></div>`;
+            output += `<div class="col-4"><h3><strong>${attr.name}</strong></h3><p>${attr.description}</p></div>`;
         });
     } else {
         let obj = myObject.data.attributes;
