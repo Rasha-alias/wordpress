@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "frankimages",
+  "info": {
+    "singularName": "frankimage",
+    "pluralName": "frankimages",
+    "displayName": "frankimage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "img": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}
